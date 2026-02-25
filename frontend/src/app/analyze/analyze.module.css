@@ -1,0 +1,134 @@
+.main {
+    padding: 6rem 0 8rem;
+}
+
+.header {
+    margin-bottom: 4rem;
+}
+
+.stepIndicator {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.formSection {
+    margin-bottom: 4rem;
+}
+
+.sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.formRow {
+    display: flex;
+    gap: 2rem;
+}
+
+.formRow>* {
+    flex: 1;
+}
+
+/* Autocomplete Custom UI */
+.autocompleteWrapper {
+    position: relative;
+}
+
+.searchIndicator {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dropdownList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    border: 1px solid var(--border-strong);
+    border-top: none;
+    z-index: 50;
+    max-height: 250px;
+    overflow-y: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdownItem {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-subtle);
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    transition: background var(--transition-fast);
+}
+
+.dropdownItem:last-child {
+    border-bottom: none;
+}
+
+.dropdownItem:hover {
+    background: var(--bg-tertiary);
+}
+
+/* Amenities */
+.amenitiesGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.amenityChip {
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius-sm);
+    background: transparent;
+    border: 1px solid var(--border-strong);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-family: var(--font-sans);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.amenityChip:hover {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+}
+
+.amenityActive {
+    background: var(--text-primary);
+    border-color: var(--text-primary);
+    color: var(--bg-primary);
+}
+
+.errorBox {
+    padding: 1rem;
+    background: var(--status-danger-bg);
+    color: var(--status-danger);
+    border: 1px solid rgba(139, 44, 44, 0.2);
+    margin-bottom: 3rem;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+}
+
+.actions {
+    margin-top: 5rem;
+}
+
+@media (max-width: 600px) {
+    .formRow {
+        flex-direction: column;
+        gap: 0;
+    }
+}
