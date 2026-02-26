@@ -45,7 +45,7 @@ backend/
 
 ### Prerequisites
 
-- Node.js 18+
+- Node.js 20+
 - Python 3.12+
 
 ### Frontend
@@ -68,7 +68,25 @@ uvicorn backend.main:app --reload --port 8000   # → http://localhost:8000
 
 API docs available at [http://localhost:8000/docs](http://localhost:8000/docs) when the backend is running.
 
-### Docker
+### Docker Compose (Recommended)
+
+Spin up both services with a single command — includes hot reloading:
+
+```bash
+docker compose up
+```
+
+- Frontend: [http://localhost:3000](http://localhost:3000)
+- Backend: [http://localhost:8000](http://localhost:8000)
+- API docs: [http://localhost:8000/docs](http://localhost:8000/docs)
+
+Edit any file and changes reflect immediately (uvicorn `--reload` for backend, Next.js HMR for frontend).
+
+Requires Docker and a `backend/.env` file (copy from `backend/.env.example`).
+
+### Docker (Backend Only)
+
+For production backend image (used by Cloud Run):
 
 ```bash
 docker build -t rentback-api .
@@ -229,7 +247,8 @@ Not required for the current MVP. The app is fully stateless — RentCast and Gr
 | `npm run build` | `frontend/` | Production build |
 | `npm run lint` | `frontend/` | Run ESLint |
 | `uvicorn backend.main:app --reload --port 8000` | `backend/` | Start FastAPI dev server |
-| `docker build -t rentback-api .` | root | Build Docker image |
+| `docker compose up` | root | Start frontend + backend with hot reload |
+| `docker build -t rentback-api .` | root | Build production backend Docker image |
 
 ## Notes
 

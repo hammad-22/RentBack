@@ -34,22 +34,28 @@ backend/
 
 ## Commands
 
-### Frontend
+### Docker Compose (Recommended)
 ```bash
-cd frontend && npm install        # Install deps
+docker compose up             # Start both services with hot reload
+```
+Frontend on :3000, backend on :8000. Edit any file and changes reflect immediately.
+
+### Frontend (Manual)
+```bash
+cd frontend && npm install        # Install deps (requires Node 20+)
 npm run dev                       # Dev server on :3000
 npm run build                     # Production build
 npm run lint                      # ESLint
 ```
 
-### Backend
+### Backend (Manual)
 ```bash
 cd backend
 pip install -r requirements.txt
 uvicorn backend.main:app --reload --port 8000   # Dev server on :8000, docs at /docs
 ```
 
-### Docker
+### Docker (Production Backend Only)
 ```bash
 docker build -t rentback-api .
 docker run -p 8080:8080 rentback-api
