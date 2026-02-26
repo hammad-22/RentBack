@@ -31,3 +31,6 @@ out/
 # Python virtualenv
 venv/
 .venv/
+
+# Private internal docs — never publish
+ROADMAP.md
