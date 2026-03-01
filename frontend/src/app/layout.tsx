@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,8 +18,7 @@ export default function RootLayout({
         <nav className="navbar">
           <div className="container navbar-inner">
             <a href="/" className="navbar-brand">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="brand-icon" src="/logo.png" alt="RentBack logo" height={50} />
+              <Image className="brand-icon" src="/logo.png" alt="RentBack logo" width={50} height={50} priority />
               RentBack
             </a>
             <div className="navbar-links">
