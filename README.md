@@ -2,6 +2,19 @@
 
 **AI-powered rent negotiation for NYC renters.** Analyzes comparable listings, adjusts for feature differences, and generates data-backed negotiation scripts to help you pay fair rent.
 
+## Table of Contents
+
+- [How It Works](#how-it-works)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Environment Variables](#environment-variables)
+- [Architecture](#architecture)
+- [API](#api)
+- [Hosting & Deployment](#hosting--deployment)
+- [Code Conventions](#code-conventions)
+- [Scripts](#scripts)
+
 ## How It Works
 
 1. **Enter your apartment details** — address, bedrooms, bathrooms, current rent, amenities

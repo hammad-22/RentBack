@@ -17,7 +17,9 @@ export default function RootLayout({
         <nav className="navbar">
           <div className="container navbar-inner">
             <a href="/" className="navbar-brand">
-              <span className="brand-icon">⬡</span> RentBack
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img className="brand-icon" src="/logo.png" alt="RentBack logo" height={50} />
+              RentBack
             </a>
             <div className="navbar-links">
               <a href="/">Overview</a>
